@@ -29,7 +29,7 @@
                            &kp LALT  &kp LGUI  &mo 1   &kp SPACE  &kp BSPC   &mo 2   &kp RET  &mo 3
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
         };
 
