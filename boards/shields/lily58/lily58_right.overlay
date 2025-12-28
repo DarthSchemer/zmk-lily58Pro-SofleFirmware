@@ -1,5 +1,5 @@
 /* boards/shields/lily58/lily58_right.overlay */
-#include <lily58.dtsi>
+#include "lily58.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -16,10 +16,9 @@
         ;
 };
 
-/* FIX THE ENCODER */
 &right_encoder {
     status = "okay";
-    /* Override the bad pins from dtsi (Pin 4 conflict & Pin 23 invalid) */
+    /* Override the bad pins from dtsi (Pin 4 conflict) */
     /* We assume the encoder is installed in the OLED header slots (Pins 2 & 3) */
     a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
