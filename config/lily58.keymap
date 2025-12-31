@@ -1,4 +1,4 @@
-/*
+*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -30,7 +30,7 @@
             >;
 
             /* ENCODERS: Left = PgUp/Dn (Logs), Right = Undo/Redo (Code) */
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
 
         };
 
