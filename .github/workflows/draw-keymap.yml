@@ -26,7 +26,7 @@ jobs:
         run: mkdir -p keymap-drawer
         
       - name: Draw keymap
-        run: keymap draw config/sofle.keymap -c keymap_drawer.yaml -o keymap-drawer/sofle.svg
+        run: keymap draw config/sofle.keymap keymap_drawer.yaml -o keymap-drawer/sofle.svg
         
       - name: Commit and push keymap
         uses: stefanzweifel/git-auto-commit-action@v5
