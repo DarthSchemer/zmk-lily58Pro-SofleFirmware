@@ -1,39 +1,20 @@
-name: Draw Keymap
-
+name: Draw ZMK keymaps
 on:
+  workflow_dispatch:
   push:
     paths:
-      - 'config/sofle.keymap'
-      - 'keymap_drawer.yaml'
-  workflow_dispatch:
+      - "config/*.keymap"
+      - "keymap_drawer.yaml"
 
 jobs:
   draw:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          
-      - name: Install keymap-drawer
-        run: pip install keymap-drawer
-
-      - name: Create output directory
-        run: mkdir -p keymap-drawer
-        
-      - name: Parse keymap to YAML
-        run: keymap -c keymap_drawer.yaml parse -z config/sofle.keymap > keymap-drawer/sofle.yaml
-
-      - name: Draw keymap from YAML
-        run: keymap -c keymap_drawer.yaml draw keymap-drawer/sofle.yaml -o keymap-drawer/sofle.svg
-
-      - name: Commit and push keymap
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'Update keymap diagram [skip ci]'
-          file_pattern: 'keymap-drawer/*'
-
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      amend_commit: true
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.yaml"
+      output_folder: "keymap-drawer"
+      parse_args: ""
+      draw_args: ""
