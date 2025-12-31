@@ -40,7 +40,7 @@ The keyboard's internal wiring follows the Sofle schematic, not the Lily58. By b
 
 **Left Encoder:**
 - Turn: Page Up/Down
-- Press: Mute toggle
+- Press: Screenshot (macOS Cmd+Shift+4 - area selection)
 
 **Right Encoder:**
 - Turn: Volume Up/Down
