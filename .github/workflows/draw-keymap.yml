@@ -21,6 +21,9 @@ jobs:
           
       - name: Install keymap-drawer
         run: pip install keymap-drawer
+
+      - name: Create output directory
+        run: mkdir -p keymap-drawer
         
       - name: Draw keymap
         run: keymap draw config/sofle.keymap -c keymap_drawer.yaml -o keymap-drawer/sofle.svg
