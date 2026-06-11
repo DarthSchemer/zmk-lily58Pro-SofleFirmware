@@ -1,5 +1,5 @@
 include:
   - board: nice_nano@1.0.0
-    shield: lily58_left
+    shield: sofle_left
   - board: nice_nano@1.0.0
-    shield: lily58_right
+    shield: sofle_right
