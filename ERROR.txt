@@ -1,0 +1,1042 @@
+Run west build -s zmk/app -d "/tmp/tmp.b0tGVDpPrO" -b "nice_nano"  -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD="lily58_left" -DZMK_EXTRA_MODULES='/__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware' 
+  west build -s zmk/app -d "/tmp/tmp.b0tGVDpPrO" -b "nice_nano"  -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD="lily58_left" -DZMK_EXTRA_MODULES='/__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware' 
+  shell: sh -x {0}
+  env:
+    build_dir: /tmp/tmp.b0tGVDpPrO
+    base_dir: /tmp/zmk-config
+    zephyr_version: 4.1.0
+    extra_west_args: 
+    extra_cmake_args: -DSHIELD="lily58_left" -DZMK_EXTRA_MODULES='/__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware'
+    display_name: lily58_left - nice_nano
+    artifact_name: lily58_left-nice_nano-zmk
+    zmk_revision: main
++ west build -s zmk/app -d /tmp/tmp.b0tGVDpPrO -b nice_nano -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD=lily58_left -DZMK_EXTRA_MODULES=/__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware
+-- west build: generating a build system
+Loading Zephyr default modules (Zephyr base).
+-- Application: /tmp/zmk-config/zmk/app
+-- CMake version: 3.31.6
+-- Found Python3: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3.10") found components: Interpreter
+-- Cache files will be written to: /tmp/zmk-config/zephyr/.cache
+-- Zephyr version: 4.1.0 (/tmp/zmk-config/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+CMake Warning at /tmp/zmk-config/zephyr/cmake/modules/boards.cmake:136 (message):
+  BOARD_ROOT element without a 'boards' subdirectory:
+
+  /__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware
+
+  Hints:
+
+    - if your board directory is '/foo/bar/boards/my_board' then add '/foo/bar' to BOARD_ROOT, not the entire board directory
+    - if in doubt, use absolute paths
+Call Stack (most recent call first):
+  /tmp/zmk-config/zephyr/cmake/modules/zephyr_default.cmake:134 (include)
+  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  /tmp/zmk-config/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:9 (find_package)
+
+
+-- Board: nice_nano, Revision: 2.0.0, qualifiers: nrf52840
+-- Shield(s): lily58_left
+Checking /__w/zmk-lily58Pro-SofleFirmware/zmk-lily58Pro-SofleFirmware
+Checking /tmp/zmk-config/zmk/app/module
+Checking /tmp/zmk-config/zmk/app
+found /tmp/zmk-config/zmk/app
+-- ZMK Config directory: /tmp/zmk-config/config
+-- ZMK Config Kconfig: /tmp/zmk-config/config/lily58.conf
+-- ZMK Config Kconfig: /tmp/zmk-config/config/lily58.conf
+nice_nano_nrf52840 for _nrf52840 for nice_nano with version 2.0.0
+-- Using keymap file: /tmp/zmk-config/config/lily58.keymap
+-- Using keymap file: /tmp/zmk-config/config/lily58.keymap
+Checking /tmp/zmk-config/zephyr
+-- ZEPHYR_TOOLCHAIN_VARIANT not set, trying to locate Zephyr SDK
+-- Found host-tools: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
+-- Found toolchain: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)
+-- Found Dtc: /opt/zephyr-sdk-0.16.9/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.6.0", minimum required is "1.4.6")
+-- Found BOARD.dts: /tmp/zmk-config/zmk/app/module/boards/nicekeyboards/nice_nano/nice_nano.dts
+-- Found devicetree overlay: /tmp/zmk-config/zmk/app/boards/shields/lily58/lily58_left.overlay
+-- Found devicetree overlay: /tmp/zmk-config/config/lily58.keymap
+-- Generated zephyr.dts: /tmp/tmp.b0tGVDpPrO/zephyr/zephyr.dts
+-- Generated pickled edt: /tmp/tmp.b0tGVDpPrO/zephyr/edt.pickle
+-- Generated devicetree_generated.h: /tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h
+-- Including generated dts.cmake file: /tmp/tmp.b0tGVDpPrO/zephyr/dts.cmake
+
+warning: Deprecated symbol KSCAN is enabled.
+
+Parsing /tmp/zmk-config/zmk/app/Kconfig
+Loaded configuration '/tmp/zmk-config/zmk/app/module/boards/nicekeyboards/nice_nano/nice_nano_2_0_0_defconfig'
+Merged configuration '/tmp/zmk-config/zmk/app/prj.conf'
+Merged configuration '/tmp/zmk-config/zmk/app/boards/shields/lily58/lily58_left.conf'
+Merged configuration '/tmp/zmk-config/config/lily58.conf'
+Merged configuration '/tmp/zmk-config/config/lily58.conf'
+Configuration saved to '/tmp/tmp.b0tGVDpPrO/zephyr/.config'
+Kconfig header saved to '/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/autoconf.h'
+-- Found GnuLd: /opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/arm-zephyr-eabi/bin/ld.bfd (found version "2.38")
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
+-- Using ccache: /usr/bin/ccache
+-- Configuring done (5.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: /tmp/tmp.b0tGVDpPrO
+-- west build: building application
+[1/710] Preparing syscall dependency handling
+
+[2/710] Generating include/generated/zephyr/app_version.h
+[3/710] Generating include/generated/zephyr/version.h
+-- Zephyr version: 4.1.0 (/tmp/zmk-config/zephyr), build: 58a5874a446a
+[4/710] Generating misc/generated/syscalls_subdirs.trigger
+[5/710] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[6/710] Generating include/generated/device-api-sections.ld, include/generated/device-api-sections.cmake
+[7/710] Generating include/generated/zephyr/syscall_dispatch.c, include/generated/zephyr/syscall_exports_llext.c, syscall_weakdefs_llext.c, include/generated/zephyr/syscall_list.h
+[8/710] Generating include/generated/zephyr/driver-validation.h
+[9/710] Generating include/generated/zephyr/kobj-types-enum.h, include/generated/zephyr/otype-to-str.h, include/generated/zephyr/otype-to-size.h
+[10/710] Building C object zephyr/CMakeFiles/offsets.dir/arch/arm/core/offsets/offsets.c.obj
+[11/710] Generating include/generated/zephyr/offsets.h
+[12/710] Building C object CMakeFiles/app.dir/src/stdlib.c.obj
+[13/710] Building C object CMakeFiles/app.dir/src/sensors.c.obj
+[14/710] Building C object CMakeFiles/app.dir/src/matrix_transform.c.obj
+[15/710] Building C object CMakeFiles/app.dir/src/event_manager.c.obj
+[16/710] Building C object CMakeFiles/app.dir/src/activity.c.obj
+[17/710] Building C object CMakeFiles/app.dir/src/behavior.c.obj
+[18/710] Building C object CMakeFiles/app.dir/src/physical_layouts.c.obj
+[19/710] Building C object CMakeFiles/app.dir/src/events/activity_state_changed.c.obj
+[20/710] Building C object CMakeFiles/app.dir/src/ext_power_generic.c.obj
+[21/710] Building C object CMakeFiles/app.dir/src/events/position_state_changed.c.obj
+[22/710] Building C object CMakeFiles/app.dir/src/events/sensor_event.c.obj
+[23/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_reset.c.obj
+[24/710] Building C object CMakeFiles/app.dir/src/events/usb_conn_state_changed.c.obj
+[25/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_ext_power.c.obj
+[26/710] Building C object CMakeFiles/app.dir/src/pointing/input_listener.c.obj
+[27/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_key_press.c.obj
+[28/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_momentary_layer.c.obj
+[29/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_caps_word.c.obj
+[30/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_key_repeat.c.obj
+[31/710] Building C object CMakeFiles/app.dir/src/hid.c.obj
+[32/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_mod_morph.c.obj
+[33/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_to_layer.c.obj
+[34/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_outputs.c.obj
+[35/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_transparent.c.obj
+[36/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_toggle_layer.c.obj
+[37/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_none.c.obj
+[38/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_sensor_rotate_var.c.obj
+[39/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_mouse_key_press.c.obj
+[40/710] Building C object CMakeFiles/app.dir/src/combo.c.obj
+[41/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_sensor_rotate_common.c.obj
+[42/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_input_two_axis.c.obj
+[43/710] Building C object CMakeFiles/app.dir/src/conditional_layer.c.obj
+[44/710] Building C object CMakeFiles/app.dir/src/behavior_queue.c.obj
+[45/710] Building C object CMakeFiles/app.dir/src/events/endpoint_changed.c.obj
+[46/710] Building C object CMakeFiles/app.dir/src/endpoints.c.obj
+[47/710] Building C object CMakeFiles/app.dir/src/events/layer_state_changed.c.obj
+[48/710] Building C object CMakeFiles/app.dir/src/hid_listener.c.obj
+[49/710] Building C object CMakeFiles/app.dir/src/events/ble_active_profile_changed.c.obj
+[50/710] Building C object CMakeFiles/app.dir/src/events/keycode_state_changed.c.obj
+[51/710] Building C object CMakeFiles/app.dir/src/events/modifiers_state_changed.c.obj
+[52/710] Building C object CMakeFiles/app.dir/src/keymap.c.obj
+In file included from /tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:34,
+                 from /tmp/zmk-config/zephyr/include/zephyr/sys/util.h:17,
+                 from /tmp/zmk-config/zmk/app/include/drivers/behavior.h:11,
+                 from /tmp/zmk-config/zmk/app/src/keymap.c:7:
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: warning: excess elements in array initializer
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:50: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                  ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: note: (near initialization for 'zmk_sensor_keymap[0]')
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:50: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                  ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: warning: excess elements in array initializer
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:110: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                                                                              ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: note: (near initialization for 'zmk_sensor_keymap[1]')
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:110: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                                                                              ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: warning: excess elements in array initializer
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:168: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                                                                                                                                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:45:5: note: (near initialization for 'zmk_sensor_keymap[2]')
+   45 |     {                                                                                              \
+      |     ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:72:26: note: in definition of macro '__DEBRACKET'
+   72 | #define __DEBRACKET(...) __VA_ARGS__
+      |                          ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:64:9: note: in expansion of macro '__GET_ARG2_DEBRACKET'
+   64 |         __GET_ARG2_DEBRACKET(one_or_two_args _if_code, _else_code)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:59:9: note: in expansion of macro '__COND_CODE'
+   59 |         __COND_CODE(_XXXX##_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_macro.h:204:9: note: in expansion of macro 'Z_COND_CODE_1'
+  204 |         Z_COND_CODE_1(_flag, _if_1_code, _else_code)
+      |         ^~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:54:5: note: in expansion of macro 'COND_CODE_1'
+   54 |     COND_CODE_1(                                                                                   \
+      |     ^~~~~~~~~~~
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_listify.h:22:9: note: in expansion of macro '_TRANSFORM_SENSOR_ENTRY'
+   22 |         F(1, __VA_ARGS__)
+      |         ^
+/tmp/zmk-config/zephyr/include/zephyr/sys/util_internal.h:105:36: note: in expansion of macro 'Z_UTIL_LISTIFY_2'
+  105 | #define UTIL_PRIMITIVE_CAT(a, ...) a##__VA_ARGS__
+      |                                    ^
+/tmp/zmk-config/zmk/app/src/keymap.c:56:11: note: in expansion of macro 'LISTIFY'
+   56 |         ({LISTIFY(DT_PROP_LEN(node, sensor_bindings), _TRANSFORM_SENSOR_ENTRY, (, ), node)}),      \
+      |           ^~~~~~~
+/tmp/tmp.b0tGVDpPrO/zephyr/include/generated/zephyr/devicetree_generated.h:6732:168: note: in expansion of macro 'SENSOR_LAYER'
+ 6732 | #define DT_N_S_keymap_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_keymap_S_default_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_lower_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_raise_layer) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_keymap_S_function_layer)
+      |                                                                                                                                                                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:5269:24: note: in expansion of macro 'DT_N_S_keymap_FOREACH_CHILD_SEP'
+ 5269 | #define DT_CAT(a1, a2) a1 ## a2
+      |                        ^~
+/tmp/zmk-config/zephyr/include/zephyr/devicetree.h:4015:9: note: in expansion of macro 'DT_FOREACH_CHILD_SEP'
+ 4015 |         DT_FOREACH_CHILD_SEP(DT_DRV_INST(inst), fn, sep)
+      |         ^~~~~~~~~~~~~~~~~~~~
+/tmp/zmk-config/zmk/app/src/keymap.c:103:9: note: in expansion of macro 'DT_INST_FOREACH_CHILD_SEP'
+  103 |         DT_INST_FOREACH_CHILD_SEP(0, SENSOR_LAYER, (, ))};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+[53/710] Building C object CMakeFiles/app.dir/src/behaviors/behavior_bt.c.obj
+[54/710] Building C object CMakeFiles/app.dir/src/hog.c.obj
+[55/710] Building C object CMakeFiles/app.dir/src/events/battery_state_changed.c.obj
+[56/710] Building C object CMakeFiles/app.dir/src/battery.c.obj
+/tmp/zmk-config/zmk/app/src/battery.c:32:2: warning: #warning "Using a node labeled BATTERY for the battery sensor is deprecated. Set a zmk,battery chosen node instead. (Ignore this if you don't have a battery sensor.)" [-Wcpp]
+   32 | #warning                                                                                           \
+      |  ^~~~~~~
+[57/710] Building C object CMakeFiles/app.dir/src/ble.c.obj
+[58/710] Building C object CMakeFiles/app.dir/src/usb.c.obj
+[59/710] Building C object CMakeFiles/app.dir/src/events/split_peripheral_status_changed.c.obj
+[60/710] Building C object CMakeFiles/app.dir/src/workqueue.c.obj
+[61/710] Building C object CMakeFiles/app.dir/src/split/central.c.obj
+[62/710] Building C object CMakeFiles/app.dir/src/split/bluetooth/central.c.obj
+[63/710] Building C object CMakeFiles/app.dir/src/display/main.c.obj
+[64/710] Building C object CMakeFiles/app.dir/src/main.c.obj
+[65/710] Building C object CMakeFiles/app.dir/src/display/status_screen.c.obj
+[66/710] Building C object CMakeFiles/app.dir/src/settings/reset_settings_none.c.obj
+[67/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/heap/heap_info.c.obj
+[68/710] Building C object CMakeFiles/app.dir/src/display/widgets/battery_status.c.obj
+[69/710] Building C object CMakeFiles/app.dir/src/display/widgets/output_status.c.obj
+[70/710] Building C object CMakeFiles/app.dir/src/display/widgets/layer_status.c.obj
+[71/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_packaged.c.obj
+[72/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/heap/heap.c.obj
+[73/710] Linking C static library app/libapp.a
+[74/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/thread_entry.c.obj
+[75/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/sem.c.obj
+[76/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/assert.c.obj
+[77/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/printk.c.obj
+[78/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/dec.c.obj
+[79/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/hex.c.obj
+[80/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/reboot.c.obj
+[81/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/timeutil.c.obj
+[82/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_complete.c.obj
+[83/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/rb.c.obj
+[84/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/notify.c.obj
+[85/710] Building C object zephyr/CMakeFiles/zephyr.dir/misc/generated/configs.c.obj
+[86/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/bitarray.c.obj
+[87/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/tracing/tracing_none.c.obj
+[88/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/ring_buffer.c.obj
+[89/710] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/onoff.c.obj
+[90/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/mem_mgmt/mem_attr.c.obj
+[91/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/bluetooth/services/dis.c.obj
+[92/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/usb/device/usb_transfer.c.obj
+[93/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/bluetooth/services/bas/bas.c.obj
+[94/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/usb/device/usb_descriptor.c.obj
+[95/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/settings/src/settings_store.c.obj
+[96/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/settings/src/settings_none.c.obj
+[97/710] Generating linker_zephyr_pre0.cmd
+[98/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/usb/device/usb_device.c.obj
+[99/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/settings/src/settings_init.c.obj
+[100/710] Building C object zephyr/CMakeFiles/zephyr_pre0.dir/misc/empty_file.c.obj
+[101/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/settings/src/settings_line.c.obj
+[102/710] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/settings/src/settings.c.obj
+[103/710] Building C object zephyr/arch/common/CMakeFiles/arch__common.dir/sw_isr_common.c.obj
+[104/710] Building ASM object zephyr/arch/arch/arm/core/CMakeFiles/arch__arm__core.dir/nmi_on_reset.S.obj
+[105/710] Building C object zephyr/arch/common/CMakeFiles/isr_tables.dir/isr_tables.c.obj
+[106/710] Linking C static library zephyr/arch/common/libisr_tables.a
+[107/710] Linking C static library zephyr/libzephyr.a
+[108/710] Linking C static library zephyr/arch/common/libarch__common.a
+[109/710] Building ASM object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/fault_s.S.obj
+[110/710] Building C object zephyr/arch/arch/arm/core/CMakeFiles/arch__arm__core.dir/fatal.c.obj
+[111/710] Building ASM object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/reset.S.obj
+[112/710] Building C object zephyr/arch/arch/arm/core/CMakeFiles/arch__arm__core.dir/nmi.c.obj
+[113/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/fpu.c.obj
+[114/710] Building ASM object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/vector_table.S.obj
+[115/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/exc_exit.c.obj
+[116/710] Building C object zephyr/arch/arch/arm/core/CMakeFiles/arch__arm__core.dir/tls.c.obj
+[117/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/scb.c.obj
+[118/710] Linking C static library zephyr/arch/arch/arm/core/libarch__arm__core.a
+[119/710] Building ASM object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/swap_helper.S.obj
+[120/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/fault.c.obj
+[121/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/prep_c.c.obj
+[122/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/thread_abort.c.obj
+[123/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/cpu_idle.c.obj
+[124/710] Building ASM object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/__aeabi_read_tp.S.obj
+[125/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/thread.c.obj
+[126/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/irq_manage.c.obj
+[127/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/isr_wrapper.c.obj
+[128/710] Building C object zephyr/arch/arch/arm/core/cortex_m/CMakeFiles/arch__arm__core__cortex_m.dir/irq_init.c.obj
+[129/710] Building C object zephyr/arch/arch/arm/core/mpu/CMakeFiles/arch__arm__core__mpu.dir/arm_mpu_regions.c.obj
+[130/710] Linking C static library zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a
+[131/710] Building C object zephyr/arch/arch/arm/core/mpu/CMakeFiles/arch__arm__core__mpu.dir/arm_core_mpu.c.obj
+[132/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/cbprintf.c.obj
+[133/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/errno_wrap.c.obj
+[134/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/assert.c.obj
+[135/710] Building C object zephyr/arch/arch/arm/core/mpu/CMakeFiles/arch__arm__core__mpu.dir/arm_mpu.c.obj
+[136/710] Linking C static library zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a
+[137/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/chk_fail.c.obj
+[138/710] Building C object zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/source/stdlib/abort.c.obj
+[139/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/exit.c.obj
+[140/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/stdio.c.obj
+[141/710] Building C object zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/source/stdlib/malloc.c.obj
+[142/710] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/locks.c.obj
+[143/710] Linking C static library zephyr/lib/libc/common/liblib__libc__common.a
+[144/710] Linking C static library zephyr/lib/libc/picolibc/liblib__libc__picolibc.a
+[145/710] Building C object zephyr/soc/soc/nrf52840/CMakeFiles/soc__nordic.dir/validate_enabled_instances.c.obj
+[146/710] Building C object zephyr/soc/soc/nrf52840/CMakeFiles/soc__nordic.dir/validate_base_addresses.c.obj
+[147/710] Building C object zephyr/subsys/bluetooth/common/CMakeFiles/subsys__bluetooth__common.dir/addr.c.obj
+[148/710] Building C object zephyr/lib/net_buf/CMakeFiles/lib__net_buf.dir/buf.c.obj
+[149/710] Building C object zephyr/subsys/random/CMakeFiles/subsys__random.dir/random_xoshiro128.c.obj
+[150/710] Building C object zephyr/soc/soc/nrf52840/CMakeFiles/soc__nordic.dir/nrf52/soc.c.obj
+[151/710] Linking C static library zephyr/soc/soc/nrf52840/libsoc__nordic.a
+[152/710] Building C object zephyr/lib/net_buf/CMakeFiles/lib__net_buf.dir/buf_simple.c.obj
+[153/710] Linking C static library zephyr/lib/net_buf/liblib__net_buf.a
+[154/710] Building C object zephyr/subsys/random/CMakeFiles/subsys__random.dir/random_entropy_device.c.obj
+[155/710] Building C object zephyr/subsys/bluetooth/common/CMakeFiles/subsys__bluetooth__common.dir/dummy.c.obj
+[156/710] Linking C static library zephyr/subsys/random/libsubsys__random.a
+[157/710] Building C object zephyr/subsys/bluetooth/common/CMakeFiles/subsys__bluetooth__common.dir/bt_str.c.obj
+[158/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/uuid.c.obj
+[159/710] Building C object zephyr/subsys/bluetooth/common/CMakeFiles/subsys__bluetooth__common.dir/rpa.c.obj
+[160/710] Linking C static library zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a
+[161/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/addr.c.obj
+[162/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/long_wq.c.obj
+[163/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/buf.c.obj
+[164/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/settings.c.obj
+[165/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/data.c.obj
+[166/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/hci_common.c.obj
+[167/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/ecc.c.obj
+[168/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/adv.c.obj
+[169/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/id.c.obj
+[170/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/scan.c.obj
+[171/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/l2cap.c.obj
+[172/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/hci_core.c.obj
+[173/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/conn.c.obj
+[174/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/keys.c.obj
+[175/710] Building C object zephyr/subsys/bluetooth/crypto/CMakeFiles/subsys__bluetooth__crypto.dir/bt_crypto.c.obj
+[176/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/util/mem.c.obj
+[177/710] Building C object zephyr/subsys/bluetooth/crypto/CMakeFiles/subsys__bluetooth__crypto.dir/bt_crypto_psa.c.obj
+[178/710] Linking C static library zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a
+[179/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/util/memq.c.obj
+[180/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/util/mayfly.c.obj
+[181/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/util/dbuf.c.obj
+[182/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ll_feat.c.obj
+[183/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/util/util.c.obj
+[184/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/att.c.obj
+[185/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ll_addr.c.obj
+[186/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ll_tx_pwr.c.obj
+[187/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/smp.c.obj
+[188/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ticker/ticker.c.obj
+[189/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/lll_common.c.obj
+[190/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/hci/hci_driver.c.obj
+[191/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull.c.obj
+[192/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_scan.c.obj
+[193/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_adv.c.obj
+[194/710] Building C object zephyr/subsys/bluetooth/host/CMakeFiles/subsys__bluetooth__host.dir/gatt.c.obj
+[195/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_tx_queue.c.obj
+[196/710] Linking C static library zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a
+[197/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/hci/hci.c.obj
+[198/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_enc.c.obj
+[199/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_conn.c.obj
+[200/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_phy.c.obj
+[201/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_common.c.obj
+[202/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_local.c.obj
+[203/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp.c.obj
+[204/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_pdu.c.obj
+[205/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_chmu.c.obj
+[206/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_chan.c.obj
+[207/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_conn_upd.c.obj
+[208/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_llcp_remote.c.obj
+[209/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_peripheral.c.obj
+[210/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_central.c.obj
+[211/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/lll_chan.c.obj
+[212/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_sched.c.obj
+[213/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/crypto/crypto.c.obj
+[214/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_clock.c.obj
+[215/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll.c.obj
+[216/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_peripheral.c.obj
+[217/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_conn.c.obj
+[218/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_adv.c.obj
+[219/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_scan.c.obj
+[220/710] Building C object zephyr/subsys/bluetooth/controller/CMakeFiles/subsys__bluetooth__controller.dir/ll_sw/ull_filter.c.obj
+[221/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/lll/lll_central.c.obj
+[222/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hci/hci_vendor.c.obj
+[223/710] Linking C static library zephyr/subsys/bluetooth/controller/libsubsys__bluetooth__controller.a
+[224/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hal/nrf5/cntr.c.obj
+[225/710] Building C object zephyr/subsys/input/CMakeFiles/subsys__input.dir/input_hid.c.obj
+[226/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hal/nrf5/mayfly.c.obj
+[227/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hal/nrf5/ticker.c.obj
+[228/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hal/nrf5/ecb.c.obj
+[229/710] Building C object zephyr/subsys/input/CMakeFiles/subsys__input.dir/input_utils.c.obj
+[230/710] Building C object zephyr/subsys/input/CMakeFiles/subsys__input.dir/input.c.obj
+[231/710] Linking C static library zephyr/subsys/input/libsubsys__input.a
+[232/710] Building C object zephyr/drivers/entropy/CMakeFiles/drivers__entropy.dir/entropy_nrf5.c.obj
+[233/710] Building C object zephyr/subsys/bluetooth/controller/ll_sw/nordic/CMakeFiles/subsys__bluetooth__controller__ll_sw__nordic.dir/hal/nrf5/radio/radio.c.obj
+[234/710] Building C object zephyr/drivers/display/CMakeFiles/drivers__display.dir/ssd1306.c.obj
+[235/710] Linking C static library zephyr/subsys/bluetooth/controller/ll_sw/nordic/libsubsys__bluetooth__controller__ll_sw__nordic.a
+[236/710] Building C object zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/clock_control_nrf.c.obj
+[237/710] Linking C static library zephyr/drivers/display/libdrivers__display.a
+[238/710] Linking C static library zephyr/drivers/clock_control/libdrivers__clock_control.a
+[239/710] Building C object zephyr/drivers/usb/common/nrf_usbd_common/CMakeFiles/drivers__usb__common__nrf_usbd_common.dir/nrf_usbd_common.c.obj
+[240/710] Linking C static library zephyr/drivers/usb/common/nrf_usbd_common/libdrivers__usb__common__nrf_usbd_common.a
+[241/710] Building C object zephyr/drivers/usb/device/CMakeFiles/drivers__usb__device.dir/usb_dc_nrfx.c.obj
+[242/710] Linking C static library zephyr/drivers/usb/device/libdrivers__usb__device.a
+[243/710] Building C object zephyr/drivers/entropy/CMakeFiles/drivers__entropy.dir/entropy_bt_hci.c.obj
+[244/710] Linking C static library zephyr/drivers/entropy/libdrivers__entropy.a
+[245/710] Building C object zephyr/drivers/hwinfo/CMakeFiles/drivers__hwinfo.dir/hwinfo_weak_impl.c.obj
+[246/710] Building C object zephyr/drivers/hwinfo/CMakeFiles/drivers__hwinfo.dir/hwinfo_nrf.c.obj
+[247/710] Linking C static library zephyr/drivers/hwinfo/libdrivers__hwinfo.a
+[248/710] Building C object zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/i2c_common.c.obj
+[249/710] Building C object zephyr/drivers/kscan/CMakeFiles/drivers__kscan.dir/tmp/zmk-config/zmk/app/module/drivers/kscan/kscan_gpio.c.obj
+[250/710] Building C object zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/gpio_nrfx.c.obj
+[251/710] Building C object zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/common.c.obj
+[252/710] Linking C static library zephyr/drivers/gpio/libdrivers__gpio.a
+[253/710] Building C object zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/i2c_nrfx_twi.c.obj
+[254/710] Building C object zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/i2c_nrfx_twi_common.c.obj
+[255/710] Linking C static library zephyr/drivers/i2c/libdrivers__i2c.a
+[256/710] Building C object zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/sys_clock_init.c.obj
+[257/710] Building C object zephyr/drivers/sensor/nordic/temp/CMakeFiles/drivers__sensor__nordic__temp.dir/temp_nrf5.c.obj
+[258/710] Building C object zephyr/drivers/kscan/CMakeFiles/drivers__kscan.dir/tmp/zmk-config/zmk/app/module/drivers/kscan/kscan_gpio_matrix.c.obj
+[259/710] Linking C static library zephyr/drivers/sensor/nordic/temp/libdrivers__sensor__nordic__temp.a
+[260/710] Linking C static library zephyr/drivers/kscan/libdrivers__kscan.a
+[261/710] Building C object zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/nrf_rtc_timer.c.obj
+[262/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_class.c.obj
+[263/710] Linking C static library zephyr/drivers/timer/libdrivers__timer.a
+[264/710] Building C object zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/pinctrl_nrf.c.obj
+[265/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_group.c.obj
+[266/710] Linking C static library zephyr/drivers/pinctrl/libdrivers__pinctrl.a
+[267/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_draw.c.obj
+[268/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_id_builtin.c.obj
+[269/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_property.c.obj
+[270/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_event.c.obj
+[271/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj.c.obj
+[272/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_style_gen.c.obj
+[273/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_scroll.c.obj
+[274/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/dma2d/lv_draw_dma2d.c.obj
+[275/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_tree.c.obj
+[276/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_pos.c.obj
+[277/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/dma2d/lv_draw_dma2d_fill.c.obj
+[278/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/dma2d/lv_draw_dma2d_img.c.obj
+[279/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_obj_style.c.obj
+[280/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_arc.c.obj
+[281/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/core/lv_refr.c.obj
+[282/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_image.c.obj
+[283/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_line.c.obj
+[284/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_mask.c.obj
+[285/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw.c.obj
+[286/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_triangle.c.obj
+[287/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/display/lv_display.c.obj
+[288/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_rect.c.obj
+[289/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_vector.c.obj
+[290/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_draw_buf_pxp.c.obj
+[291/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_draw_pxp.c.obj
+[292/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_draw_pxp_fill.c.obj
+[293/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_label.c.obj
+[294/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_draw_buf.c.obj
+[295/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_draw_pxp_img.c.obj
+[296/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_draw_pxp_layer.c.obj
+[297/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_pxp_osa.c.obj
+[298/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_pxp_cfg.c.obj
+[299/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/pxp/lv_pxp_utils.c.obj
+[300/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_buf_vglite.c.obj
+[301/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite.c.obj
+[302/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_border.c.obj
+[303/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_arc.c.obj
+[304/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_fill.c.obj
+[305/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_layer.c.obj
+[306/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_img.c.obj
+[307/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_triangle.c.obj
+[308/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_label.c.obj
+[309/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_draw_vglite_line.c.obj
+[310/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_vglite_path.c.obj
+[311/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_vglite_buf.c.obj
+[312/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_vglite_utils.c.obj
+[313/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/nxp/vglite/lv_vglite_matrix.c.obj
+[314/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_arc.c.obj
+[315/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/lv_image_decoder.c.obj
+[316/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_border.c.obj
+[317/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_fill.c.obj
+[318/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_line.c.obj
+[319/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_label.c.obj
+[320/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_image.c.obj
+[321/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.c.obj
+[322/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_mask_rectangle.c.obj
+[323/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_triangle.c.obj
+[324/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_utils.c.obj
+[325/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend.c.obj
+[326/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_l8.c.obj
+[327/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_al88.c.obj
+[328/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_i1.c.obj
+[329/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_arc.c.obj
+[330/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565.c.obj
+[331/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_border.c.obj
+[332/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb888.c.obj
+[333/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c.obj
+[334/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_gradient.c.obj
+[335/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_fill.c.obj
+[336/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw.c.obj
+[337/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_letter.c.obj
+[338/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_mask_rect.c.obj
+[339/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_img.c.obj
+[340/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_box_shadow.c.obj
+[341/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_line.c.obj
+[342/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_buf_vg_lite.c.obj
+[343/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_triangle.c.obj
+[344/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_vector.c.obj
+[345/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.c.obj
+[346/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite.c.obj
+[347/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_arc.c.obj
+[348/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_border.c.obj
+[349/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_fill.c.obj
+[350/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_layer.c.obj
+[351/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_utils.c.obj
+[352/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_line.c.obj
+[353/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_mask.c.obj
+[354/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_img.c.obj
+[355/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.c.obj
+[356/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_triangle.c.obj
+[357/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_decoder.c.obj
+[358/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_math.c.obj
+[359/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_vector.c.obj
+[360/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.c.obj
+[361/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/sw/lv_draw_sw_transform.c.obj
+[362/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_pending.c.obj
+[363/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_grad.c.obj
+[364/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.c.obj
+[365/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_path.c.obj
+[366/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font.c.obj
+[367/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/draw/vg_lite/lv_vg_lite_utils.c.obj
+[368/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.obj
+[369/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_10.c.obj
+[370/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_12.c.obj
+[371/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_fmt_txt.c.obj
+[372/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_14.c.obj
+[373/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_binfont_loader.c.obj
+[374/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_18.c.obj
+[375/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_20.c.obj
+[376/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_16.c.obj
+[377/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_22.c.obj
+[378/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_28.c.obj
+[379/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_28_compressed.c.obj
+[380/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_24.c.obj
+[381/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_26.c.obj
+[382/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_30.c.obj
+[383/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_34.c.obj
+[384/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_32.c.obj
+[385/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_36.c.obj
+[386/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_38.c.obj
+[387/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_40.c.obj
+[388/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_42.c.obj
+[389/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_48.c.obj
+[390/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_8.c.obj
+[391/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_46.c.obj
+[392/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_montserrat_44.c.obj
+[393/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_unscii_16.c.obj
+[394/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_simsun_14_cjk.c.obj
+[395/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_simsun_16_cjk.c.obj
+[396/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/layouts/grid/lv_grid.c.obj
+[397/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/font/lv_font_unscii_8.c.obj
+[398/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/layouts/flex/lv_flex.c.obj
+[399/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/barcode/code128.c.obj
+[400/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/layouts/lv_layout.c.obj
+[401/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/ffmpeg/lv_ffmpeg.c.obj
+[402/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/barcode/lv_barcode.c.obj
+[403/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/freetype/lv_freetype.c.obj
+[404/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/bin_decoder/lv_bin_decoder.c.obj
+[405/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/indev/lv_indev_scroll.c.obj
+[406/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/indev/lv_indev.c.obj
+[407/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_cbfs.c.obj
+[408/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/freetype/lv_freetype_image.c.obj
+[409/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/bmp/lv_bmp.c.obj
+[410/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/freetype/lv_freetype_glyph.c.obj
+[411/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/freetype/lv_ftsystem.c.obj
+[412/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/freetype/lv_freetype_outline.c.obj
+[413/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_littlefs.c.obj
+[414/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/gif/gifdec.c.obj
+[415/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_fatfs.c.obj
+[416/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_memfs.c.obj
+[417/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_posix.c.obj
+[418/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_stdio.c.obj
+[419/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/fsdrv/lv_fs_win32.c.obj
+[420/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/gif/lv_gif.c.obj
+[421/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/lz4/lz4.c.obj
+[422/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/qrcode/lv_qrcode.c.obj
+[423/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/libjpeg_turbo/lv_libjpeg_turbo.c.obj
+[424/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/libpng/lv_libpng.c.obj
+[425/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/lodepng/lodepng.c.obj
+[426/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/rle/lv_rle.c.obj
+[427/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/tjpgd/tjpgd.c.obj
+[428/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/lodepng/lv_lodepng.c.obj
+[429/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/qrcode/qrcodegen.c.obj
+[430/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/tiny_ttf/lv_tiny_ttf.c.obj
+[431/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/rlottie/lv_rlottie.c.obj
+[432/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/cache/lv_cache_entry.c.obj
+[433/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/lv_init.c.obj
+[434/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/cache/lv_cache.c.obj
+[435/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/libs/tjpgd/lv_tjpgd.c.obj
+[436/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/cache/lv_cache_lru_rb.c.obj
+[437/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/cache/lv_image_cache.c.obj
+[438/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_anim_timeline.c.obj
+[439/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/cache/lv_image_header_cache.c.obj
+[440/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_bidi.c.obj
+[441/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_async.c.obj
+[442/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_array.c.obj
+[443/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_color_op.c.obj
+[444/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_anim.c.obj
+[445/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_color.c.obj
+[446/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_area.c.obj
+[447/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_log.c.obj
+[448/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_iter.c.obj
+[449/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_lru.c.obj
+[450/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_ll.c.obj
+[451/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_event.c.obj
+[452/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_matrix.c.obj
+[453/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_palette.c.obj
+[454/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_fs.c.obj
+[455/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_templ.c.obj
+[456/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_rb.c.obj
+[457/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_style.c.obj
+[458/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_text_ap.c.obj
+[459/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_math.c.obj
+[460/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_profiler_builtin.c.obj
+[461/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_utils.c.obj
+[462/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/osal/lv_os.c.obj
+[463/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/file_explorer/lv_file_explorer.c.obj
+[464/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_style_gen.c.obj
+[465/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/fragment/lv_fragment.c.obj
+[466/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/gridnav/lv_gridnav.c.obj
+[467/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_text.c.obj
+[468/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/fragment/lv_fragment_manager.c.obj
+[469/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/ime/lv_ime_pinyin.c.obj
+[470/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/misc/lv_timer.c.obj
+[471/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/monkey/lv_monkey.c.obj
+[472/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/vg_lite_tvg/vg_lite_matrix.c.obj
+[473/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/snapshot/lv_snapshot.c.obj
+[474/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/builtin/lv_tlsf.c.obj
+[475/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/imgfont/lv_imgfont.c.obj
+[476/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/clib/lv_mem_core_clib.c.obj
+[477/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/clib/lv_sprintf_clib.c.obj
+[478/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/sysmon/lv_sysmon.c.obj
+[479/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/clib/lv_string_clib.c.obj
+[480/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/themes/default/lv_theme_default.c.obj
+[481/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/builtin/lv_string_builtin.c.obj
+[482/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/lv_mem.c.obj
+[483/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/themes/lv_theme.c.obj
+[484/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/others/observer/lv_observer.c.obj
+[485/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/stdlib/builtin/lv_sprintf_builtin.c.obj
+[486/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/animimage/lv_animimage.c.obj
+[487/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/arc/lv_arc.c.obj
+[488/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/button/lv_button.c.obj
+[489/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/tick/lv_tick.c.obj
+[490/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/bar/lv_bar.c.obj
+[491/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.c.obj
+[492/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/themes/mono/lv_theme_mono.c.obj
+[493/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/calendar/lv_calendar_chinese.c.obj
+[494/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/themes/simple/lv_theme_simple.c.obj
+[495/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/calendar/lv_calendar_header_arrow.c.obj
+[496/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/chart/lv_chart.c.obj
+[497/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.c.obj
+[498/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/canvas/lv_canvas.c.obj
+[499/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/checkbox/lv_checkbox.c.obj
+[500/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/calendar/lv_calendar.c.obj
+[501/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/keyboard/lv_keyboard.c.obj
+[502/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/dropdown/lv_dropdown.c.obj
+[503/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/imagebutton/lv_imagebutton.c.obj
+[504/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/led/lv_led.c.obj
+[505/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/image/lv_image.c.obj
+[506/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/list/lv_list.c.obj
+[507/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/line/lv_line.c.obj
+[508/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/lottie/lv_lottie.c.obj
+[509/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/objx_templ/lv_objx_templ.c.obj
+[510/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_dropdown_properties.c.obj
+[511/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_image_properties.c.obj
+[512/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_keyboard_properties.c.obj
+[513/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/menu/lv_menu.c.obj
+[514/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_label_properties.c.obj
+[515/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/msgbox/lv_msgbox.c.obj
+[516/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_style_properties.c.obj
+[517/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_obj_properties.c.obj
+[518/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_roller_properties.c.obj
+[519/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/property/lv_textarea_properties.c.obj
+[520/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/scale/lv_scale.c.obj
+[521/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/slider/lv_slider.c.obj
+[522/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/roller/lv_roller.c.obj
+[523/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/span/lv_span.c.obj
+[524/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/spinbox/lv_spinbox.c.obj
+[525/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/switch/lv_switch.c.obj
+[526/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/table/lv_table.c.obj
+[527/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/textarea/lv_textarea.c.obj
+[528/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/spinner/lv_spinner.c.obj
+[529/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/tileview/lv_tileview.c.obj
+[530/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/label/lv_label.c.obj
+[531/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/tabview/lv_tabview.c.obj
+[532/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/tmp/zmk-config/modules/lib/gui/lvgl/src/widgets/win/lv_win.c.obj
+[533/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_display.c.obj
+[534/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl.c.obj
+[535/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_display_mono.c.obj
+[536/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_display_24bit.c.obj
+[537/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_display_16bit.c.obj
+[538/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_display_32bit.c.obj
+[539/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/mdk/system_nrf52840.c.obj
+[540/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/nrfx_glue.c.obj
+[541/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/helpers/nrfx_flag32_allocator.c.obj
+[542/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/lvgl_mem.c.obj
+[543/710] Building C object modules/lvgl/CMakeFiles/modules__lvgl.dir/input/lvgl_common_input.c.obj
+[544/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/helpers/nrfx_ram_ctrl.c.obj
+[545/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/src/nrfx_clock.c.obj
+[546/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/src/nrfx_power.c.obj
+[547/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/aesni.c.obj
+[548/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/aria.c.obj
+[549/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/asn1parse.c.obj
+[550/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/asn1write.c.obj
+[551/710] Linking C static library modules/lvgl/libmodules__lvgl.a
+[552/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/base64.c.obj
+[553/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/bignum_core.c.obj
+[554/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/bignum_mod_raw.c.obj
+[555/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/bignum_mod.c.obj
+[556/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/aes.c.obj
+[557/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/bignum.c.obj
+[558/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/block_cipher.c.obj
+[559/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/camellia.c.obj
+[560/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ccm.c.obj
+[561/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/chacha20.c.obj
+[562/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/chachapoly.c.obj
+[563/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/cipher_wrap.c.obj
+[564/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/src/nrfx_twi_twim.c.obj
+[565/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/constant_time.c.obj
+[566/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/cipher.c.obj
+[567/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/cmac.c.obj
+[568/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/des.c.obj
+[569/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/src/nrfx_twi.c.obj
+[570/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/debug.c.obj
+[571/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ctr_drbg.c.obj
+[572/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/dhm.c.obj
+[573/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecdh.c.obj
+[574/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecdsa.c.obj
+[575/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecp_curves.c.obj
+[576/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecjpake.c.obj
+[577/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecp_curves_new.c.obj
+[578/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ecp.c.obj
+[579/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/entropy.c.obj
+[580/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/entropy_poll.c.obj
+[581/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/gcm.c.obj
+[582/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/error.c.obj
+[583/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/hmac_drbg.c.obj
+[584/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/lmots.c.obj
+[585/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/hkdf.c.obj
+[586/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/lms.c.obj
+[587/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/md5.c.obj
+[588/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/md.c.obj
+[589/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/mps_trace.c.obj
+[590/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/mps_reader.c.obj
+[591/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/oid.c.obj
+[592/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/nist_kw.c.obj
+[593/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/padlock.c.obj
+[594/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/memory_buffer_alloc.c.obj
+[595/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/poly1305.c.obj
+[596/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/rsa_alt_helpers.c.obj
+[597/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/platform_util.c.obj
+[598/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/platform.c.obj
+[599/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ripemd160.c.obj
+[600/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/sha1.c.obj
+[601/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/rsa.c.obj
+[602/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_util.c.obj
+[603/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/sha512.c.obj
+[604/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/timing.c.obj
+[605/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/version_features.c.obj
+[606/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/sha3.c.obj
+[607/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/threading.c.obj
+[608/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/version.c.obj
+[609/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/tmp/zmk-config/modules/crypto/mbedtls/library/sha256.c.obj
+[610/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_aead.c.obj
+[611/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_cipher.c.obj
+[612/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_driver_wrappers_no_static.c.obj
+[613/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_ecp.c.obj
+[614/710] Building C object modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir/tmp/zmk-config/modules/hal/nordic/nrfx/drivers/src/nrfx_gpiote.c.obj
+[615/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/zephyr_entropy.c.obj
+[616/710] Linking C static library modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a
+[617/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_ffdh.c.obj
+[618/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_hash.c.obj
+[619/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSBase.dir/zephyr_init.c.obj
+[620/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_mac.c.obj
+[621/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_storage.c.obj
+[622/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_pake.c.obj
+[623/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_se.c.obj
+[624/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_its_file.c.obj
+[625/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_rsa.c.obj
+[626/710] Linking C static library modules/mbedtls/libmbedTLSBase.a
+[627/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_client.c.obj
+[628/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pem.c.obj
+[629/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pkcs12.c.obj
+[630/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/3rdparty/p256-m/p256-m_driver_entrypoints.c.obj
+[631/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pkparse.c.obj
+[632/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pkcs5.c.obj
+[633/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto_slot_management.c.obj
+[634/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pkwrite.c.obj
+[635/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pk.c.obj
+[636/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pk_wrap.c.obj
+[637/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/pk_ecc.c.obj
+[638/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509.c.obj
+[639/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509_create.c.obj
+[640/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509_crl.c.obj
+[641/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509_crt.c.obj
+[642/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/3rdparty/p256-m/p256-m/p256-m.c.obj
+[643/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509write_crt.c.obj
+[644/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509write.c.obj
+[645/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509_csr.c.obj
+[646/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSX509.dir/tmp/zmk-config/modules/crypto/mbedtls/library/x509write_csr.c.obj
+[647/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_ciphersuites.c.obj
+[648/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/net_sockets.c.obj
+[649/710] Linking C static library modules/mbedtls/libmbedTLSX509.a
+[650/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_cache.c.obj
+[651/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_client.c.obj
+[652/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_cookie.c.obj
+[653/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_debug_helpers_generated.c.obj
+[654/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_msg.c.obj
+[655/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_ticket.c.obj
+[656/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls12_client.c.obj
+[657/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls13_client.c.obj
+[658/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls12_server.c.obj
+[659/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls13_keys.c.obj
+[660/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls13_generic.c.obj
+[661/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls13_server.c.obj
+[662/710] Building C object modules/mbedtls/CMakeFiles/modules__mbedtls.dir/tmp/zmk-config/modules/crypto/mbedtls/library/ssl_tls.c.obj
+[663/710] Building C object modules/module/lib/zmk_debounce/CMakeFiles/..__zmk__app__module__lib__zmk_debounce.dir/debounce.c.obj
+[664/710] Linking C static library modules/module/lib/zmk_debounce/lib..__zmk__app__module__lib__zmk_debounce.a
+[665/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/main_weak.c.obj
+[666/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/banner.c.obj
+[667/710] Building C object modules/module/drivers/sensor/ec11/CMakeFiles/..__zmk__app__module__drivers__sensor__ec11.dir/ec11_trigger.c.obj
+[668/710] Building C object modules/module/drivers/sensor/ec11/CMakeFiles/..__zmk__app__module__drivers__sensor__ec11.dir/ec11.c.obj
+[669/710] Linking C static library modules/module/drivers/sensor/ec11/lib..__zmk__app__module__drivers__sensor__ec11.a
+[670/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/busy_wait.c.obj
+[671/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/device.c.obj
+[672/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/init_static.c.obj
+[673/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/errno.c.obj
+[674/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/fatal.c.obj
+[675/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/version.c.obj
+[676/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/float.c.obj
+[677/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/kheap.c.obj
+[678/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/init.c.obj
+[679/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/mem_slab.c.obj
+[680/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/mailbox.c.obj
+[681/710] Building C object modules/mbedtls/CMakeFiles/mbedTLSCrypto.dir/tmp/zmk-config/modules/crypto/mbedtls/library/psa_crypto.c.obj
+[682/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/idle.c.obj
+[683/710] Linking C static library modules/mbedtls/libmbedTLSCrypto.a
+[684/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/msg_q.c.obj
+[685/710] Linking C static library modules/mbedtls/libmodules__mbedtls.a
+[686/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/mutex.c.obj
+[687/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/sem.c.obj
+[688/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/queue.c.obj
+[689/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/system_work_q.c.obj
+[690/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/stack.c.obj
+[691/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/priority_queues.c.obj
+[692/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/condvar.c.obj
+[693/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/timeslicing.c.obj
+[694/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/thread.c.obj
+[695/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/work.c.obj
+[696/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/pipe.c.obj
+[697/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/xip.c.obj
+[698/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/sched.c.obj
+[699/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/mempool.c.obj
+[700/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/timer.c.obj
+[701/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/dynamic_disabled.c.obj
+[702/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/timeout.c.obj
+[703/710] Building C object zephyr/kernel/CMakeFiles/kernel.dir/poll.c.obj
+[704/710] Linking C static library zephyr/kernel/libkernel.a
+[705/710] Linking C executable zephyr/zephyr_pre0.elf
+[706/710] Generating linker.cmd
+[707/710] Generating isr_tables.c, isr_tables_vt.ld, isr_tables_swi.ld
+[708/710] Building C object zephyr/CMakeFiles/zephyr_final.dir/misc/empty_file.c.obj
+[709/710] Building C object zephyr/CMakeFiles/zephyr_final.dir/isr_tables.c.obj
+[710/710] Linking C executable zephyr/zmk.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      365712 B       792 KB     45.09%
+             RAM:       62186 B       256 KB     23.72%
+        IDT_LIST:          0 GB        32 KB      0.00%
+Generating files from /tmp/tmp.b0tGVDpPrO/zephyr/zmk.elf for board: nice_nano
+Converted to uf2, output size: 731648, start address: 0x26000
+Wrote 731648 bytes to zmk.uf2
